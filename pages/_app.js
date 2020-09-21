@@ -1,6 +1,10 @@
-import React from "react";
-import "../styles/globals.css";
+import { GlobalStyles } from "../components/GlobalStyles";
 
-const App = ({ Component, pageProps }) => <Component {...pageProps} />;
+const App = ({ Component, pageProps }) => (
+  <>
+    <GlobalStyles />
+    <Component {...pageProps} />
+  </>
+);
 
 export default App;
