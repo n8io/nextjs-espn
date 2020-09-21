@@ -1,8 +1,14 @@
+import { lngFromReq } from "next-i18next/dist/commonjs/utils";
 import Document, { Head, Html, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
 class CustomDocument extends Document {
-  static getInitialProps({ renderPage }) {
+  static getInitialProps(context) {
+    const lng = lngFromReq(context.req);
+
+    console.log({ lng });
+
+    const { renderPage } = context;
     // Step 1: Create an instance of ServerStyleSheet
     const sheet = new ServerStyleSheet();
 
@@ -15,12 +21,14 @@ class CustomDocument extends Document {
     const styleTags = sheet.getStyleElement();
 
     // Step 4: Pass styleTags as a prop
-    return { ...page, styleTags };
+    return { ...page, lng, styleTags };
   }
 
   render() {
+    const { lng, isRTL } = this.props;
+
     return (
-      <Html lang="en-US">
+      <Html lang={lng} dir={isRTL ? "rtl" : "ltr"}>
         <Head>
           {/* Step 5: Output the styles in the head  */}
           {this.props.styleTags}

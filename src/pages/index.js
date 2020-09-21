@@ -1,12 +1,3 @@
-import Head from "next/head";
+import { App } from "../modules/app";
 
-const Root = () => (
-  <>
-    <Head>
-      <title>Root</title>
-    </Head>
-    <span>Root</span>
-  </>
-);
-
-export default Root;
+export default App;
