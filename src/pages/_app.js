@@ -1,5 +1,6 @@
 import App from "next/app";
 import { i18n } from "../i18n";
+import { I18nNamespace } from "../shared/constants";
 
 const Root = ({ Component, pageProps }) => <Component {...pageProps} />;
 
@@ -8,7 +9,7 @@ Root.getInitialProps = async (context) => {
 
   return {
     ...props,
-    namespacesRequired: ["common"],
+    namespacesRequired: [I18nNamespace.CATEGORIES],
   };
 };
 

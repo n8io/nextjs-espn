@@ -2,7 +2,7 @@ import ErrorPage from "next/error";
 import { useTranslate } from "../shared/hooks";
 
 const Error = ({ statusCode }) => {
-  const t = useTranslate("common");
+  const t = useTranslate();
   let key = "thisPageCouldNotBeFound";
 
   switch (statusCode) {
@@ -20,7 +20,7 @@ const Error = ({ statusCode }) => {
 Error.getInitialProps = ({ res, err }) => {
   const statusCode = res ? res.statusCode : err ? err.statusCode : 404;
 
-  return { namespacesRequired: ["common"], statusCode };
+  return { namespacesRequired: [], statusCode };
 };
 
 export default Error;

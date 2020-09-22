@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import { SeasonType } from "../../../../shared/constants";
-import { useTranslate } from "../../../../shared/hooks";
 import { App } from "../../../../modules/app";
+import { Meta } from "../../../../shared/components";
+import { I18nNamespace, SeasonType } from "../../../../shared/constants";
+import { useTranslate } from "../../../../shared/hooks";
 import { Section } from "./Section";
 
 const Container = styled.div`
@@ -10,11 +11,12 @@ const Container = styled.div`
   grid-gap: 1rem;
 `;
 
-const Home = ({ categories = [] }) => {
-  const t = useTranslate("categories");
+const Home = ({ categories }) => {
+  const t = useTranslate(I18nNamespace.CATEGORIES);
 
   return (
     <App>
+      <Meta.Title title={t("home")} />
       <Container>
         {categories.map((category) => (
           <Section
@@ -42,7 +44,7 @@ Home.getInitialProps = async () => {
   const data = await fetch(url.href).then((res) => res.json());
   const categories = data?.leaders?.categories;
 
-  return { categories, namespacesRequired: ["categories"] };
+  return { categories, namespacesRequired: [I18nNamespace.CATEGORIES] };
 };
 
 export default Home;
