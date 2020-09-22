@@ -6,8 +6,6 @@ class CustomDocument extends Document {
   static getInitialProps(context) {
     const lng = lngFromReq(context.req);
 
-    console.log({ lng });
-
     const { renderPage } = context;
     // Step 1: Create an instance of ServerStyleSheet
     const sheet = new ServerStyleSheet();

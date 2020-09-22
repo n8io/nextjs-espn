@@ -1,0 +1,18 @@
+{
+  "interceptions": "Interceptions",
+  "kickoffYards": "Kickoff yards",
+  "passesDefended": "Passes defended",
+  "passingTouchdowns": "Passing touchdowns",
+  "passingYards": "Passing Yards",
+  "puntYards": "Punt yards",
+  "quarterbackRating": "Quarterback rating",
+  "receivingTouchdowns": "Receiving touchdowns",
+  "receivingYards": "Receiving Yards",
+  "receptions": "Receptions",
+  "rushingTouchdowns": "Rushing touchdowns",
+  "rushingYards": "Rushing Yards",
+  "sacks": "Sacks",
+  "totalPoints": "Total points",
+  "totalTackles": "Total tackles",
+  "totalTouchdowns": "Total touchdowns"
+}

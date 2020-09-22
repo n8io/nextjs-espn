@@ -1,1 +1,3 @@
-export { App } from "./App";
+import { Providers } from "./Providers";
+
+export { Providers as App };

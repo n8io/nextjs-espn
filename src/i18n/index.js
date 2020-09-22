@@ -10,13 +10,13 @@ const i18n = new NextI18Next({
   defaultLanguage: DEFAULT_LANGUAGE,
   defaultNS: DEFAULT_NAMESPACE,
   detection: {
-    order: ['querystring', 'cookie', 'header'],
+    order: ["querystring", "cookie", "header"],
   },
   fallbackLng: DEFAULT_LANGUAGE,
   fallbackNS: DEFAULT_NAMESPACE,
   localePath,
-  ns: DEFAULT_NAMESPACE,
-  otherLanguages: ['fr'],
+  ns: [DEFAULT_NAMESPACE, "categories"],
+  otherLanguages: [],
 });
 
 export { DEFAULT_LANGUAGE, i18n };

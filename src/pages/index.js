@@ -1,3 +1,1 @@
-import { App } from "../modules/app";
-
-export default App;
+export { default } from "../modules/home";
