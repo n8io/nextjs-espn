@@ -1,11 +1,23 @@
 import styled from 'styled-components';
 
-import { App } from 'src/modules/app';
+import { Meta } from 'src/shared/components';
 import { I18nNamespace, SeasonType } from 'src/shared/constants';
 import { useTranslate } from 'src/shared/hooks';
-import { Meta } from 'src/shared/components';
 
 import { Section } from './Section';
+
+const getOrigin = (context) => {
+  const { req } = context;
+  let origin = null;
+
+  if (req) {
+    origin = `http://${req.headers.host}`;
+  } else {
+    origin = window.location.origin;
+  }
+
+  return origin;
+};
 
 const Container = styled.div`
   display: grid;
@@ -13,12 +25,14 @@ const Container = styled.div`
   grid-gap: 1rem;
 `;
 
-const Home = ({ categories }) => {
+const Home = ({ categories, origin }) => {
   const t = useTranslate(I18nNamespace.CATEGORIES);
 
   return (
-    <App>
-      <Meta.Title title={t('home')} />
+    <>
+      <Meta.CanonicalLink href="/" origin={origin} />
+      <Meta.Description description={t('app.description')} />
+      <Meta.Title title={t('pageTitle.home')} />
       <Container>
         {categories.map((category) => (
           <Section
@@ -28,11 +42,11 @@ const Home = ({ categories }) => {
           />
         ))}
       </Container>
-    </App>
+    </>
   );
 };
 
-Home.getInitialProps = async () => {
+Home.getInitialProps = async (context) => {
   const url = new URL(
     '/apis/site/v3/sports/football/nfl/leaders',
     'https://site.web.api.espn.com'
@@ -46,7 +60,11 @@ Home.getInitialProps = async () => {
   const data = await fetch(url.href).then((res) => res.json());
   const categories = data?.leaders?.categories;
 
-  return { categories, namespacesRequired: [I18nNamespace.CATEGORIES] };
+  return {
+    categories,
+    namespacesRequired: [I18nNamespace.CATEGORIES],
+    origin: getOrigin(context),
+  };
 };
 
 export default Home;

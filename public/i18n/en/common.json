@@ -1,6 +1,6 @@
 {
   "anErrorOccurred": "An error occurred",
-  "appName": "NextJS ESPN",
+  "app": { "description": "A sample site using NextJs", "name": "NextJS ESPN" },
   "thisPageCouldNotBeFound": "This page could not be found",
-  "home": "Home"
+  "pageTitle": { "home": "Home" }
 }

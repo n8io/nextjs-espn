@@ -11,8 +11,10 @@ const GlobalStyles = createGlobalStyle`
   }
 
   a {
-    color: inherit;
-    text-decoration: none;
+    &:active,
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   * {

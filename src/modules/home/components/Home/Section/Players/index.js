@@ -1,30 +1,23 @@
-import { Headshot } from './Headshot';
+import { Player } from './Player';
+
+const Container = ({ children }) => (
+  <table>
+    <tbody>{children}</tbody>
+  </table>
+);
 
 const Players = ({ players }) => (
-  <table>
-    <tbody>
-      {players.map(({ displayValue, athlete, team }, index) => (
-        <tr key={athlete.id}>
-          <td width={10}>{index + 1}</td>
-          <td width={80}>
-            <Headshot
-              alt={athlete.headshot.alt}
-              playerId={athlete.id}
-              width={80}
-            />
-          </td>
-          <td>
-            <a href={`http://www.espn.com/nfl/player/_/id/${athlete.id}`}>
-              {athlete.displayName}
-            </a>
-            &nbsp;
-            {team.abbreviation}
-          </td>
-          <td>{displayValue}</td>
-        </tr>
-      ))}
-    </tbody>
-  </table>
+  <Container>
+    {players.map(({ displayValue: value, athlete: player, team }, index) => (
+      <Player
+        key={player.id}
+        player={player}
+        rank={index + 1}
+        team={team}
+        value={value}
+      />
+    ))}
+  </Container>
 );
 
 export { Players };

@@ -7,7 +7,8 @@ const Title = ({ overwrite = false, title }) => {
 
   return (
     <Head>
-      <title>{overwrite ? title : `${t('appName')} - ${title}`}</title>
+      <title>{overwrite ? title : `${t('app.name')} - ${title}`}</title>
+      <meta content={title} property="og:name" />
     </Head>
   );
 };
