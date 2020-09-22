@@ -1,2 +1,2 @@
-export { I18nNamespace } from "./I18nNamespace";
-export { SeasonType } from "./seasonType";
+export { I18nNamespace } from './i18nNamespace';
+export { SeasonType } from './seasonType';

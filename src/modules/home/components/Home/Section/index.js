@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-const { Header } = require("./Header");
-const { Players } = require("./Players");
+const { Header } = require('./Header');
+const { Players } = require('./Players');
 
 const Container = styled.div`
   display: grid;

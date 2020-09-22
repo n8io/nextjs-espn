@@ -1,4 +1,4 @@
-import { Image } from "src/shared/components";
+import { Image } from 'src/shared/components';
 
 const makeHeadshotUrl = ({ playerId, width }) =>
   `https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/${playerId}.png&h=${width}&w=${width}&scale=crop`;

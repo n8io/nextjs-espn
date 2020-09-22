@@ -1,6 +1,6 @@
-import { lngFromReq } from "next-i18next/dist/commonjs/utils";
-import Document, { Head, Html, Main, NextScript } from "next/document";
-import { ServerStyleSheet } from "styled-components";
+import { lngFromReq } from 'next-i18next/dist/commonjs/utils';
+import Document, { Head, Html, Main, NextScript } from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 
 class CustomDocument extends Document {
   static getInitialProps(context) {
@@ -26,7 +26,7 @@ class CustomDocument extends Document {
     const { lng, isRTL } = this.props;
 
     return (
-      <Html lang={lng} dir={isRTL ? "rtl" : "ltr"}>
+      <Html dir={isRTL ? 'rtl' : 'ltr'} lang={lng}>
         <Head>
           {/* Step 5: Output the styles in the head  */}
           {this.props.styleTags}

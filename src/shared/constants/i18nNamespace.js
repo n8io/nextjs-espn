@@ -1,6 +1,6 @@
 const I18nNamespace = {
-  CATEGORIES: "categories",
-  COMMON: "common",
+  CATEGORIES: 'categories',
+  COMMON: 'common',
 };
 
 export { I18nNamespace };

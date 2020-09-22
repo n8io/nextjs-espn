@@ -1,16 +1,17 @@
-import ErrorPage from "next/error";
-import { useTranslate } from "src/shared/hooks";
+import ErrorPage from 'next/error';
+
+import { useTranslate } from 'src/shared/hooks';
 
 const Error = ({ statusCode }) => {
   const t = useTranslate();
-  let key = "thisPageCouldNotBeFound";
+  let key = 'thisPageCouldNotBeFound';
 
   switch (statusCode) {
     case 404:
-      key = "thisPageCouldNotBeFound";
+      key = 'thisPageCouldNotBeFound';
       break;
     default:
-      key = "anErrorOccurred";
+      key = 'anErrorOccurred';
       break;
   }
 

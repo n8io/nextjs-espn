@@ -1,4 +1,4 @@
-import { GlobalStyles } from "./GlobalStyles";
+import { GlobalStyles } from './GlobalStyles';
 
 const Providers = ({ children }) => (
   <>

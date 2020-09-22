@@ -1,9 +1,11 @@
-import { App } from "src/modules/app";
-import { Meta } from "src/shared/components";
-import { I18nNamespace, SeasonType } from "src/shared/constants";
-import { useTranslate } from "src/shared/hooks";
-import styled from "styled-components";
-import { Section } from "./Section";
+import styled from 'styled-components';
+
+import { App } from 'src/modules/app';
+import { I18nNamespace, SeasonType } from 'src/shared/constants';
+import { useTranslate } from 'src/shared/hooks';
+import { Meta } from 'src/shared/components';
+
+import { Section } from './Section';
 
 const Container = styled.div`
   display: grid;
@@ -16,7 +18,7 @@ const Home = ({ categories }) => {
 
   return (
     <App>
-      <Meta.Title title={t("home")} />
+      <Meta.Title title={t('home')} />
       <Container>
         {categories.map((category) => (
           <Section
@@ -32,14 +34,14 @@ const Home = ({ categories }) => {
 
 Home.getInitialProps = async () => {
   const url = new URL(
-    "/apis/site/v3/sports/football/nfl/leaders",
-    "https://site.web.api.espn.com"
+    '/apis/site/v3/sports/football/nfl/leaders',
+    'https://site.web.api.espn.com'
   );
 
-  url.searchParams.set("lang", "en");
-  url.searchParams.set("limit", 5);
-  url.searchParams.set("seasonType", SeasonType.REGULAR_SEASON);
-  url.searchParams.set("season", 2020);
+  url.searchParams.set('lang', 'en');
+  url.searchParams.set('limit', 5);
+  url.searchParams.set('seasonType', SeasonType.REGULAR_SEASON);
+  url.searchParams.set('season', 2020);
 
   const data = await fetch(url.href).then((res) => res.json());
   const categories = data?.leaders?.categories;

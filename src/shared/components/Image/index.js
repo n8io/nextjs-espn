@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledImage = styled.img`
   height: ${({ height }) => height}px;
@@ -6,15 +6,15 @@ const StyledImage = styled.img`
   width: ${({ width }) => width}px;
 `;
 
-const Image = ({ alt, loading = "lazy", width, src, ...props }) => (
+const Image = ({ alt, loading = 'lazy', width, src, ...props }) => (
   <picture>
     <StyledImage
       height={width}
       {...props}
-      loading={loading}
-      width={width}
       alt={alt}
+      loading={loading}
       src={src}
+      width={width}
     />
   </picture>
 );

@@ -1,6 +1,7 @@
-import App from "next/app";
-import { i18n } from "src/i18n";
-import { I18nNamespace } from "src/shared/constants";
+import App from 'next/app';
+
+import { i18n } from 'src/i18n';
+import { I18nNamespace } from 'src/shared/constants';
 
 const Root = ({ Component, pageProps }) => <Component {...pageProps} />;
 

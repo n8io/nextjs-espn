@@ -1,2 +1,4 @@
-export { Image } from "./Image";
-export * as Meta from "./Meta";
+export { Image } from './Image';
+import * as Meta from './Meta';
+
+export { Meta };
