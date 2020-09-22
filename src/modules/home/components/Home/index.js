@@ -1,8 +1,8 @@
+import { App } from "src/modules/app";
+import { Meta } from "src/shared/components";
+import { I18nNamespace, SeasonType } from "src/shared/constants";
+import { useTranslate } from "src/shared/hooks";
 import styled from "styled-components";
-import { App } from "../../../../modules/app";
-import { Meta } from "../../../../shared/components";
-import { I18nNamespace, SeasonType } from "../../../../shared/constants";
-import { useTranslate } from "../../../../shared/hooks";
 import { Section } from "./Section";
 
 const Container = styled.div`

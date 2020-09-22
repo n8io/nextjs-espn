@@ -1,5 +1,5 @@
 import ErrorPage from "next/error";
-import { useTranslate } from "../shared/hooks";
+import { useTranslate } from "src/shared/hooks";
 
 const Error = ({ statusCode }) => {
   const t = useTranslate();

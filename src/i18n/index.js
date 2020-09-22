@@ -1,7 +1,7 @@
 import NextI18Next from "next-i18next";
 import { resolve } from "path";
-import { I18nNamespace } from "../shared/constants";
-import { config } from "../config";
+import { I18nNamespace } from "src/shared/constants";
+import { config } from "src/config";
 
 const DEFAULT_LANGUAGE = "en";
 const DEFAULT_NAMESPACE = I18nNamespace.COMMON;

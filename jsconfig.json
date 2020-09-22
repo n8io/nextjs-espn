@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "src/config/*": [
+        "src/config/*"
+      ],
+      "src/i18n/*": [
+        "src/i18n/*"
+      ],
+      "src/modules/*": [
+        "src/modules/*"
+      ],
+      "src/shared/components/*": [
+        "src/shared/components/*"
+      ],
+      "src/shared/constants/*": [
+        "src/shared/constants/*"
+      ],
+      "src/shared/hooks/*": [
+        "src/shared/hooks/*"
+      ],
+      "src/shared/providers/*": [
+        "src/shared/providers/*"
+      ]
+    }
+  }
+}
