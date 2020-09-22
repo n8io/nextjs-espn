@@ -6,6 +6,7 @@
     "debug": "NODE_OPTIONS='--inspect' yarn dev",
     "dev": "next dev",
     "build": "next build",
+    "lint": "eslint .",
     "start": "next start"
   },
   "dependencies": {
@@ -17,6 +18,13 @@
     "styled-components": "^5.2.0"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.11.1"
+    "babel-plugin-styled-components": "^1.11.1",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "prettier": "^2.1.2"
   }
 }
