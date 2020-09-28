@@ -1,18 +1,18 @@
 {
   "interceptions": "Interceptions",
-  "kickoffYards": "Kickoff yards",
-  "passesDefended": "Passes defended",
-  "passingTouchdowns": "Passing touchdowns",
+  "kickoffYards": "Kickoff Yards",
+  "passesDefended": "Passes Defended",
+  "passingTouchdowns": "Passing Touchdowns",
   "passingYards": "Passing Yards",
-  "puntYards": "Punt yards",
-  "quarterbackRating": "Quarterback rating",
-  "receivingTouchdowns": "Receiving touchdowns",
+  "puntYards": "Punt Yards",
+  "quarterbackRating": "Quarterback Rating",
+  "receivingTouchdowns": "Receiving Touchdowns",
   "receivingYards": "Receiving Yards",
   "receptions": "Receptions",
-  "rushingTouchdowns": "Rushing touchdowns",
+  "rushingTouchdowns": "Rushing Touchdowns",
   "rushingYards": "Rushing Yards",
   "sacks": "Sacks",
-  "totalPoints": "Total points",
-  "totalTackles": "Total tackles",
-  "totalTouchdowns": "Total touchdowns"
+  "totalPoints": "Total Points",
+  "totalTackles": "Total Tackles",
+  "totalTouchdowns": "Total Touchdowns"
 }
